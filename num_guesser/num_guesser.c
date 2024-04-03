@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   num_guesser.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nranna <nranna@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/28 16:05:42 by nranna            #+#    #+#             */
-/*   Updated: 2024/04/02 19:08:34 by nranna           ###   ########.fr       */
+/*   Created: 2024/03/21 16:12:47 by nranna            #+#    #+#             */
+/*   Updated: 2024/03/21 17:42:49 by nranna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
 
-char	*ft_strdup(char *src)
+int	main(void)
 {
-	int		n;
-	char	*src_copy;
-
-	n = 0;
-	while (src[n])
-		n++;
-	src_copy = malloc(sizeof(char) * (n + 1));
-	if (!src_copy)
-		return (NULL);
-	n = 0;
-	while (src[n])
+	int	n, guess;
+	
+	srand(time(NULL));
+	printf("Try guessing what number is on my mind. :)\n");
+	n = rand() % 5 + 1;
+	printf("What's your guess? ");
+	scanf("%d", &guess);
+	if (n == guess)
 	{
-		src_copy[n] = src[n];
-		n++;
+		printf("Nice.\n");
+		return (0);
 	}
-	return (src_copy);
+	printf("Wrong. My number is %d :)\n", n);
+	return (0);
 }

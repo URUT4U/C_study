@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ternary.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nranna <nranna@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/28 16:05:42 by nranna            #+#    #+#             */
-/*   Updated: 2024/04/02 19:08:34 by nranna           ###   ########.fr       */
+/*   Created: 2024/03/21 17:43:32 by nranna            #+#    #+#             */
+/*   Updated: 2024/03/21 17:50:59 by nranna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stdio.h>
 
-char	*ft_strdup(char *src)
+//ternary is quite easy
+int	main(void)
 {
-	int		n;
-	char	*src_copy;
-
-	n = 0;
-	while (src[n])
-		n++;
-	src_copy = malloc(sizeof(char) * (n + 1));
-	if (!src_copy)
-		return (NULL);
-	n = 0;
-	while (src[n])
-	{
-		src_copy[n] = src[n];
-		n++;
-	}
-	return (src_copy);
+	int	x;
+	
+	x = 1;
+	/*	resp will receive 999 or 666
+		999 if x > 0. | 666 otherwise.		*/
+	int resp = (x > 0) ? 999 : 666;
+	printf("%d\n", resp);
+	return (0);
 }

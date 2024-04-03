@@ -1,33 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   bitwise_0.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nranna <nranna@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/28 16:05:42 by nranna            #+#    #+#             */
-/*   Updated: 2024/04/02 19:08:34 by nranna           ###   ########.fr       */
+/*   Created: 2024/03/28 14:39:20 by nranna            #+#    #+#             */
+/*   Updated: 2024/03/28 14:48:53 by nranna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+//bitwise is cursed
 
-char	*ft_strdup(char *src)
+int	main(void)
 {
-	int		n;
-	char	*src_copy;
 
-	n = 0;
-	while (src[n])
-		n++;
-	src_copy = malloc(sizeof(char) * (n + 1));
-	if (!src_copy)
-		return (NULL);
-	n = 0;
-	while (src[n])
-	{
-		src_copy[n] = src[n];
-		n++;
-	}
-	return (src_copy);
+	&
+	|
+	^
 }
